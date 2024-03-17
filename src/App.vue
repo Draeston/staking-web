@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full min-h-[100vh] bg-[#2F2FA2] overflow-x-hidden">
+  <main class="w-full h-[100vh] bg-[#2F2FA2] overflow-x-hidden">
     <RouterView />
   </main>
 </template>
