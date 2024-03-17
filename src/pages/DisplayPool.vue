@@ -38,18 +38,20 @@
       <n-gi :span="1">
         <n-statistic label="Staked by you" :value="pool.stakedBy" />
       </n-gi>
+      <n-gi :span="1">
+        <n-statistic label="Your rewards" :value="pool.rewardsBy" />
+      </n-gi>
     </n-grid>
 
     <n-space
       class="mt-6"
-      @click="
+    >
+      <div class="cursor-pointer" @click="
         () => {
-          pool.claimedBy = pool.rewardsBy;
+          pool.claimedBy += pool.rewardsBy;
           pool.rewardsBy = 0;
         }
-      "
-    >
-      <div class="cursor-pointer">
+      ">
         <n-card hoverable embedded class="w-[200px] h-[200px]">
           <div class="flex flex-col text-center justify-between items-center">
             <n-h2> Claim </n-h2>
